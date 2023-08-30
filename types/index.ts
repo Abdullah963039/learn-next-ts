@@ -7,3 +7,8 @@ export type ButtonProps = React.DetailedHTMLProps<
   type?: string;
   containerClassName?: string;
 };
+
+export type SearchManufactureProps = {
+  manufacturer: string;
+  setManufacturer: (manufacturer: string) => void;
+};
