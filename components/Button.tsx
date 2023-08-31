@@ -9,6 +9,8 @@ export default function Button({
   type,
   title,
   containerClassName,
+  textStyles,
+  rightIcon,
 
   ...rest
 }: ButtonProps) {
@@ -19,7 +21,18 @@ export default function Button({
       type={type ?? "button"}
       className={twMerge("custom-btn", containerClassName)}
     >
-      <span className={twMerge("flex-1")}>{title}</span>
+      <span className={twMerge("flex-1", textStyles)}>{title}</span>
+
+      {rightIcon && (
+        <div className="relative w-6 h-6">
+          <Image
+            src={rightIcon}
+            alt="Right Icon"
+            fill
+            className="object-contain"
+          />
+        </div>
+      )}
     </button>
   );
 }
