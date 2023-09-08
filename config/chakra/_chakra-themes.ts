@@ -41,28 +41,10 @@ const Container = defineStyleConfig({
   },
 });
 
-// Custom Button Config
-const Button = defineStyleConfig({
-  variants: {
-    primary: {
-      bg: "violet.600",
-      color: "white",
-      _hover: {
-        bg: "violet.700",
-        shadow: "xs",
-      },
-      _active: {
-        bg: "violet.400",
-        shadow: "sm",
-      },
-    },
-  },
-});
-
 const theme = extendTheme({
   config,
   colors,
-  components: { Container, Button },
+  components: { Container },
 });
 
 export default theme;
